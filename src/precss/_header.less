@@ -8,8 +8,40 @@
 .main-navigation{
     display: flex;
     align-items: baseline;
-    @__links{
+
+    &__links{
         display: flex;
+        align-items: baseline;
+        list-style: none;
+
+        &_tel{
+            margin-left: 56px;
+        }
     }
 
+    &__item{
+        &+&{
+            margin-left: 20px;
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            width: 0;
+            border: 1px solid @colorHLine;
+        }
+
+        &:hover::after{
+            width: 100%;
+            transition: width @transT;
+
+        }
+    }
+
+    &__link{
+        color: #000;
+        font-weight: @fontNormal;
+        font-size: 14px;
+    }
 }
+
