@@ -129,10 +129,11 @@ a{
 	overflow: hidden;
 }
 
-.main-heding{
+.main-heading{
 	font-size: 48px;
 	margin: 0;
 	text-align: center;
+	
 }
 
 /* General */
@@ -210,9 +211,26 @@ bg-normalize{
 
 .menu{
 	padding-top: 170px;
-	padding-bottom: 85px;
+	padding-bottom: 170px;
 
 	&__h{
+		font-weight: @fontNormal;
 		margin-bottom: 26px;
 	}
+
+	&__text{
+		width: 50%;
+		text-align: center;
+		margin: 0 auto;
+		line-height: 1.6;
+		font-size: 14px;
+		color: @colorTGraSection;
+		margin-bottom: 52px;
+
+		&__tabs{
+			list-style: none;
+			margin-bottom: 40px;
+		}
+	}
+
 }
