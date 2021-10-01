@@ -145,6 +145,7 @@ a{
 		background-size: cover;
 		background-position: center;
 
+
 	&__text{
 		font-size: 90px;
 		.size(7);
@@ -160,27 +161,26 @@ a{
 		border-radius: 50px;
 		vertical-align: bottom;
 		transition: @transT;
-	}
-		
 
 		&_colored{
 			box-shadow: 0px 7px 21px rgba(55, 125, 60, 0.3);
 			background-color: @colorMain;
 			color: #fff;
 			&:hover{
-				background-color: @colorHLine;
+				border-color: darken(@colorMain, 10%);
 			}
 		}
 
 		&_trans{
 			margin-left: 18px;
-			border-radius: 2px solid @colorHLine;
+			border: 2px solid @colorHLine;
 			&:hover{
-				background-color: @colorHLine;
-				color: #fff;
+				border-color: darken(@colorMain, 10%);
+			}
 		}
 	}
 }
+
 
 .banner__btn:focus{
 	box-shadow: 0px 0px 2px 2px #547756;
@@ -226,11 +226,85 @@ bg-normalize{
 		font-size: 14px;
 		color: @colorTGraSection;
 		margin-bottom: 52px;
+	}
 
-		&__tabs{
-			list-style: none;
-			margin-bottom: 40px;
+	&__tabs{
+		margin-bottom: 40px;
+		margin-right: 10px;
+		list-style: none;
+	}
+}
+
+.tabs{
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	padding: 0;
+
+	&__item{
+		@offset: 4px;
+		padding-left: @offset;
+		padding-right: @offset;
+
+		&+&{
+			margin-left: 70px;
 		}
+
+		&.active,
+		&:hover{
+			border-bottom: 2px solid @colorHLine;
+			a{
+				color: @colorMain;
+			}
+		}
+	}
+	
+
+	&__link{
+		color: #000;
+		font-weight: @fontSBold;
+	}
+}
+
+.tabs-content{
+	&__section{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	&__wrap{
+		.row-flex();
+		.xs-block({
+			justify-content: center;
+		})
+	}
+}
+
+.product{
+	.col();
+	.size(3);
+	.size-md(4);
+	.size-sm(6);
+	.size-xs(10);
+	margin-bottom: 20px;
+	text-align: center;
+
+	&__pic{
+		margin-bottom: 24px;
+		width: 100%;
+	}
+
+	&__name{
+    margin: 0;
+	margin-bottom: 8px;
+	font-weight: @fontNormal;
+	font-size: 16px;
+	}
+
+	&__price{
+		font-weight: @fontBold;
+		color: @colorMain;
 	}
 
 }
