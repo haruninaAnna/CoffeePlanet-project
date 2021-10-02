@@ -306,5 +306,94 @@ bg-normalize{
 		font-weight: @fontBold;
 		color: @colorMain;
 	}
+}
 
+.about{
+	padding-top: 85px;
+	padding-bottom: 112px;
+
+	&__slider{
+		width: 50%;
+		padding-right: @offset;
+		float: left;
+	}
+
+	&__figure{
+		margin: 0;
+		margin-bottom: 15px;
+		padding: 0;
+	}
+
+	&__h{
+		text-align: left;
+		font-weight: @fontNormal;
+		font-size: 48px;
+		margin-bottom: 34px;
+	}
+
+	&__text{
+		margin: 0;
+		padding: 0;
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+	&__first_p{
+		margin-bottom: 24px;
+	}
+
+	&__last_p{
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+
+	&__btn{
+		font-weight: @fontSBold;
+		color: @colorMain;
+		list-style: none;
+		border-bottom: 1px solid @colorHLine;
+	}
+
+	&__btn:hover{
+		list-style: none;
+	}
+	
+}
+
+.article-slider{
+	//Временное решение
+	&__slide{
+		display: none;
+		&:first-child{
+		display: block;
+		}
+	}
+
+	&__img{
+		vertical-align: bottom;
+	}
+
+	&__btns{
+		margin: 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-bottom: 36px;
+	}
+
+	&__btn{
+		.btn-reset();
+		width: 12px;
+		padding: 0;
+
+
+		&_next{
+			margin-left: 15px;
+			transform: rotate(-180deg) translateY(1.5px);
+		}
+
+		path{
+			fill: @colorMain;
+		}
+	}
 }
