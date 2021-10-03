@@ -353,12 +353,17 @@ bg-normalize{
 		font-weight: @fontSBold;
 		color: @colorMain;
 		list-style: none;
-		border-bottom: 1px solid @colorHLine;
+		background-color: #fff;
+		outline: none;
+		border: none;
 	}
 
 	&__btn:hover{
-		list-style: none;
+		border-bottom: 2px solid @colorHLine ;
 	}
+
+	&__btn:focus{
+		
 	
 }
 
@@ -401,9 +406,11 @@ bg-normalize{
 
 	&__btn:hover{
 		width: 15px;
+		
 	}
 
 	&__btn:focus{
-		outline: ;
+		color: darken(@colorMain, 10%);
+		
 	}
 }
