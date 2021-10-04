@@ -346,6 +346,7 @@ bg-normalize{
 
 	&__last_p{
 		display: inline-block;
+		margin: 0;
 		margin-bottom: 20px;
 	}
 
@@ -414,4 +415,36 @@ bg-normalize{
 		color: darken(@colorMain, 10%);
 		
 	}
+}
+
+.features{
+	margin-top: 113px;
+	margin-bottom: 117px;
+	&__h{
+		font-size: 48px;
+		font-weight: @fontNormal;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 26px;
+	}
+	&__p{
+		font-weight: @fontNormal;
+		font-size: 14px;
+		line-height: 1.6;
+		text-align: center;
+		.size(6);
+		margin: 0 auto;
+		margin-bottom: 74px;	
+	}
+
+	&__menu{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.f-item{
+	font-weight: @fontSBold;
+	font-size: 18px;
+	line-height: 1.2;
 }
