@@ -420,6 +420,7 @@ bg-normalize{
 .features{
 	margin-top: 113px;
 	margin-bottom: 117px;
+	text-align: center;
 	&__h{
 		font-size: 48px;
 		font-weight: @fontNormal;
@@ -440,7 +441,19 @@ bg-normalize{
 	&__menu{
 		display: flex;
 		justify-content: space-between;
+		&_item{
+			display: block;
+			justify-content: center;
+			.size(3);
+		}
 	}
+}
+
+.f-img{
+	overflow: hidden;
+	border-radius: 50%;
+	margin-bottom: 19px;
+	color: @colorMain;
 }
 
 .f-item{
@@ -448,3 +461,4 @@ bg-normalize{
 	font-size: 18px;
 	line-height: 1.2;
 }
+
