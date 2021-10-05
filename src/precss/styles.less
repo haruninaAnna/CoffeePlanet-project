@@ -441,6 +441,7 @@ bg-normalize{
 	&__menu{
 		display: flex;
 		justify-content: space-between;
+
 		&_item{
 			display: block;
 			justify-content: center;
@@ -513,12 +514,25 @@ bg-normalize{
 	display: flex;
 	justify-content: space-between;
 	line-height: 1.2;
-	
+
+	&__aside{
+		margin-bottom: 45px;
+	}
 
 	&__h{
 		font-weight: @fontNormal;
 		font-size: 48px;
 		padding-bottom: 58px;
+	}
+
+	&__ico{
+		display: flex;
+		align-items: baseline;
+		padding: 0;
+		
+		&_pic{
+			margin-right: 12px;
+		}
 	}
 }
 
