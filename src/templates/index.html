@@ -153,7 +153,7 @@
             Book a table in our cozy coffee shop    
         </button> 
     </article>
-    <section class=" features">
+    <section id="features" class=" features">
         <h2 class=" features__h">
             Our features
         </h2>
@@ -187,7 +187,7 @@
             </div>
         </div>
     </section>
-    <section class="visitors">
+    <section id="blog" class="visitors">
         <h2 class="visitors__h">
             Our happy visitors say:
         </h2>
@@ -231,49 +231,53 @@
         </section>
     </section>
 </main>
-<footer class="wrapper">
+<footer id="contacts" class="wrapper">
     <section class="come">
         <aside class="come__aside">
             <h2 class="come__h">
                  Come to us!
             </h2>
-            <div class="come__ico">
+            <ul class="come__ico">
                 <img class="come__ico_pic" src="img/ico-time.svg" alt="time">
-                <p>
+                <li>
                     8:00-23:00
-                </p>
-            </div>
-            <div class="come__ico">
+                </li>
+            </ul>
+            <ul class="come__ico">
                 <img class="come__ico_pic" src="img/ico-adress.svg" alt="adress">
-                <p>
+                <li>
                     9532 W Linebaugh Ave, Tampa
-                </p>
-            </div>
-            <div class="come__ico">
+                </li>
+            </ul>
+            <ul class="come__ico">
                 <img class="come__ico_pic" src="img/ico-phone.svg" alt="phone">
-                <p>
-                    +1 253 867-54-13
-                </p>
-            </div>
-            <div class="come__ico">
+                <li>
+                    <a class="footer__navigation" href="tel:+12538675413">+1 253 867-54-13</a>
+                </li>
+            </ul>
+            <ul class="come__ico">
                 <img class="come__ico_pic" src="img/ico-email.svg" alt="email">
-                <p>
-                    coffeeplanet@mail.com
-                </p>
-            </div>
-            <div>
-                <img src="img/ico-facebook.svg" alt="facebook">
-                <img src="img/ico-instagram.svg" alt="instagram">
-            </div>
-        </aside>  
+                <li>
+                    <a class="footer__navigation" href="email:coffeeplanet@mail.com">coffeeplanet@mail.com</a>
+                </li>
+            </ul>
+            <ul class="footer__web">
+                <a target="_blank" href="https://www.facebook.com/pages/Wake%20Up%20Caff%C3%A8/1776235175764882/">
+                    <img class="footer__web_link" src="img/ico-facebook.svg" alt="facebook"> 
+                </a>
+                <a target="_blank" href="#">
+                    <img class="footer__web_link" src="img/ico-instagram.svg" alt="instagram">
+                </a>
+            </ul>
+        </aside> 
         <div>
             <a target="_blank" href="https://www.google.com/maps/place/Wake+Up+Caff%C3%A9/@50.5649245,30.2644672,15z/data=!4m5!3m4!1s0x0:0xab9eccb70313f074!8m2!3d50.5657582!4d30.2680162">
                 <img class="come__ico_pic" width="767" height="461" src="../img/map.png" alt="">
             </a>
-        </div>
+        </div>   
     </section>
     <p class="footer">
-        Copyright 2019 CoffeePlanet
+        Copyright 2021 CoffeePlanet
     </p>
 </footer>
 {% include 'parts/_foot.html' %}

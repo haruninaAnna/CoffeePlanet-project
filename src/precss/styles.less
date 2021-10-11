@@ -144,6 +144,7 @@ a{
 		background-image: url(../img/bg.jpg);
 		background-size: cover;
 		background-position: center;
+		margin-bottom: 170px;
 
 
 	&__text{
@@ -168,6 +169,7 @@ a{
 			color: #fff;
 			&:hover{
 				border-color: darken(@colorMain, 10%);
+				background-color: @colorHLine;
 			}
 		}
 
@@ -175,7 +177,8 @@ a{
 			margin-left: 18px;
 			border: 2px solid @colorHLine;
 			&:hover{
-				border-color: darken(@colorMain, 10%);
+				border-color: @colorMain;
+				background-color: @colorHLine;
 			}
 		}
 	}
@@ -205,15 +208,15 @@ body{
 	padding-right: 10px;
 }
 
-bg-normalize{
+.bg-normalize{
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
 .menu{
-	padding-top: 170px;
-	padding-bottom: 170px;
+	padding-top: 0;
+	padding-bottom: 85px;
 
 	&__h{
 		font-weight: @fontNormal;
@@ -289,8 +292,10 @@ bg-normalize{
 	.size-md(4);
 	.size-sm(6);
 	.size-xs(10);
-	margin-bottom: 20px;
 	text-align: center;
+	list-style: none;
+	padding: 0;
+	
 
 	&__pic{
 		margin-bottom: 24px;
@@ -307,6 +312,8 @@ bg-normalize{
 	&__price{
 		font-weight: @fontBold;
 		color: @colorMain;
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -345,7 +352,7 @@ bg-normalize{
 	}
 
 	&__last_p{
-		display: inline-block;
+		clear: both;
 		margin: 0;
 		margin-bottom: 20px;
 	}
@@ -357,6 +364,7 @@ bg-normalize{
 		background-color: #fff;
 		outline: none;
 		border: none;
+		border-bottom: 2px solid transparent;
 	}
 
 	&__btn:hover{
@@ -378,7 +386,8 @@ bg-normalize{
 	}
 
 	&__img{
-		vertical-align: bottom;
+		display: block;
+		margin: 0;
 	}
 
 	&__btns{
@@ -393,12 +402,19 @@ bg-normalize{
 		.btn-reset();
 		width: 12px;
 		padding: 0;
-		margin-bottom: 112px;
+
+		&_prev{
+			margin-right: 25px;
+		}
+	
 
 
 		&_next{
-			margin-left: 15px;
-			transform: rotate(-180deg) translateY(1.5px);
+			svg{
+				transform: rotate(-180deg) translateY(1.5px);
+			}
+			margin-top: 1px;
+			
 		}
 
 		path{
@@ -406,10 +422,13 @@ bg-normalize{
 		}
 	}
 
-	&__btn:hover{
-		width: 15px;
-		
+	&__btn:hover,
+	&__btn:focus{
+		color: darken(@colorMain, 10%);
+		transform: scale(1.5);
+		transition: 0.3s;
 	}
+	
 
 	&__btn:focus{
 		color: darken(@colorMain, 10%);
@@ -418,14 +437,15 @@ bg-normalize{
 }
 
 .features{
-	margin-top: 113px;
-	margin-bottom: 117px;
+	padding-top: 113px;
+	padding-bottom: 113px;
 	text-align: center;
 	&__h{
 		font-size: 48px;
 		font-weight: @fontNormal;
 		display: flex;
 		justify-content: center;
+		margin-top: 0;
 		margin-bottom: 26px;
 	}
 	&__p{
@@ -446,6 +466,7 @@ bg-normalize{
 			display: block;
 			justify-content: center;
 			.size(3);
+			border-right: 1px solid #DDD;
 		}
 	}
 }
@@ -464,22 +485,25 @@ bg-normalize{
 }
 
 .visitors{
-	margin-top: 117px;
+	padding-top: 112px;
+	padding-bottom: 85px;
 	&__h{
 		font-weight: @fontNormal;
 		font-size: 48px;
+		margin-top: 0;
 		margin-bottom: 60px;
 		text-align: center;
 	}
 }
 
 .visitors__articles{
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 85px;
+	.row-flex()
+
 }
 
 .visitors__article{
+	.col();
+	.size(4);
 	padding-left: 34px;
 	padding-right: 32px;
 	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
@@ -502,18 +526,14 @@ bg-normalize{
 	}
 }
 
-.visitors__article{
-	&+&{
-		margin-left: 20px;
-	}
-}
 
 .come{
-	margin-top: 85px;
-	margin-bottom: 50px;
+	padding-top: 85px;
+	padding-bottom: 50px;
 	display: flex;
 	justify-content: space-between;
 	line-height: 1.2;
+	align-items: center;
 
 	&__aside{
 		margin-bottom: 45px;
@@ -523,12 +543,15 @@ bg-normalize{
 		font-weight: @fontNormal;
 		font-size: 48px;
 		padding-bottom: 58px;
+		margin: 0;
 	}
 
 	&__ico{
 		display: flex;
 		align-items: baseline;
 		padding: 0;
+		margin-top: 0;
+		list-style: none;
 		
 		&_pic{
 			margin-right: 12px;
@@ -537,6 +560,27 @@ bg-normalize{
 }
 
 .footer{
+	margin-top: 0;
 	margin-bottom: 36px;
 	text-align: center;
+
+	&__navigation{
+		color: #000;
+		&:hover,
+		&:focus{
+			color: @colorMain;
+		}
+	}
 }
+
+.footer__web{
+	margin-top: 45px;
+	padding-left: 0;
+		&_link{
+			&+&{
+				margin-left: 11px;
+			}
+		}
+}
+
+
