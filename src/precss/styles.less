@@ -467,7 +467,9 @@ body{
 			display: block;
 			justify-content: center;
 			.size(3);
-			border-right: 1px solid #DDD;
+			&+&{
+				border-left: 1px solid #DDD;
+			}
 		}
 	}
 }
@@ -477,6 +479,8 @@ body{
 	border-radius: 50%;
 	margin-bottom: 19px;
 	color: @colorMain;
+
+	
 }
 
 .f-item{
