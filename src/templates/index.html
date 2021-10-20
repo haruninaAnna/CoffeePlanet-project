@@ -5,10 +5,6 @@
 
 {% include 'parts/_header.html' %}
 
-{% include './parts/svgo/ico-facebook'%}
-
-{% include './parts/svgo/ico-instagram'%}
-
 
 <aside class="banner">
     <div class="wrapper">
@@ -268,8 +264,10 @@
             </ul>
             <p class="footer__web">
                 <a class="footer__web_link" target="_blank" href="https://www.facebook.com/pages/Wake%20Up%20Caff%C3%A8/1776235175764882/"> 
+                    {% include 'parts/svgo/ico-facebook.svg' %}
                 </a>
                 <a class="footer__web_link" target="_blank" href="#">
+                    {% include 'parts/svgo/ico-instagram.svg' %}
                 </a>
             </p>
         </aside> 

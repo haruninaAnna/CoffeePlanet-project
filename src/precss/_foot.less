@@ -1,5 +1,5 @@
 .modal-overlay{
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -52,21 +52,71 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    ̃̃&.active{
+    &.active{
         display: block;
     }
+   
     &_h{
-        padding-top: 90px;
-        padding-bottom: 18px;
+        padding: 0;
+        margin-top: 80px;
+        margin-bottom: 18px;
         text-align: center;
         font-size: 48px;
         font-weight: @fontNormal;
+      
     }
+
     &_p{
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 32px;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
         font-size: 14px;
         color: #555;
         line-height: 1.5;
+        max-width: 237px;
     }
 }
+
+.application{
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: @fontNormal;
+    padding-bottom: 52px;
+}
+
+.icon{
+    display: flex;
+    margin: 0 auto;
+    max-width: 374px;
+    padding-top: 14px;
+    padding-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.label{
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.button{
+    background-color:@colorMain;
+    color: #fff;
+    background-size: auto auto;
+    border: none;
+    box-shadow: 0px 7px 21px rgba(55, 125, 60, 0.3);
+    border-radius: 50px;
+    width: 214px;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-bottom: 90px;
+}
+
 
