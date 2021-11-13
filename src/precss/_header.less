@@ -14,6 +14,10 @@
     display: flex;
     align-items: baseline;
 
+    .media-max(777px, {
+        display: none
+    });
+
     &__links{
         display: flex;
         align-items: baseline;
@@ -44,6 +48,38 @@
         color: #000;
         font-weight: @fontNormal;
         font-size: 14px;
+    }
+
+    &.is-open{
+        opacity: 0.9;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        .main-navigation__links{
+            margin: 0;
+            flex-direction: column;
+            align-items: stretch;
+            li+li{
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            
+            a{
+                font-size: 18px;
+                font-weight: @fontSBold;
+                text-align: center;
+            }
+        }
+        .main-navigation__links_tel{
+            margin-top: 30px;
+        }
     }
 }
 
