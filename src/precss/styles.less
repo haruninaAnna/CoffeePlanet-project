@@ -404,6 +404,12 @@ body{
 	&__pic{
 		margin-bottom: 24px;
 		width: 100%;
+		.media-max(700px, {
+			margin-bottom: 15px;
+		});
+		.media-max(960px, {
+			margin-top: 20px;
+		});
 	}
 
 	&__name{
@@ -531,8 +537,6 @@ body{
 		&_prev{
 			margin-right: 25px;
 		}
-	
-
 
 		&_next{
 			svg{
@@ -554,7 +558,6 @@ body{
 		transition: 0.3s;
 	}
 	
-
 	&__btn:focus{
 		color: darken(@colorMain, 10%);
 		
@@ -565,7 +568,7 @@ body{
 	padding-top: 113px;
 	padding-bottom: 113px;
 	text-align: center;
-	.media-max(750px, {
+	.media-max(760px, {
 		padding-top: 56px;
 		padding-bottom: 56px;
 	});
@@ -582,19 +585,42 @@ body{
 		font-size: 14px;
 		line-height: 1.6;
 		text-align: center;
-		.size(6);
+		width: 50%;
 		margin: 0 auto;
-		margin-bottom: 74px;	
+		margin-bottom: 92px;
+		.media-max(700px, {
+			margin-bottom: 46px;
+		});
+	
 	}
 
 	&__menu{
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
+		
 
 		&_item{
-			display: block;
-			justify-content: center;
-			.size(3);
+			width: 25%;
+			font-size: 18px;
+			font-weight: @fontSBold;
+			text-align: center;
+			position: relative;
+			.media-max(760px, {
+				width: 50%;
+				&:nth-child(n+3){
+					border-top: 1px solid #DDD;
+				}
+				&:nth-child(odd){
+					border-left: none;
+				}
+				.media-max(400px, {
+					font-style: 14px;
+				});	
+				
+			});
+
+
 			&+&{
 				border-left: 1px solid #DDD;
 			}
@@ -605,8 +631,11 @@ body{
 .f-pic{
 	overflow: hidden;
 	border-radius: 50%;
+	margin-top: 30px;
 	margin-bottom: 19px;
 	color: @colorMain;
+	padding-bottom: 0;
+	
 
 	
 }
@@ -615,6 +644,9 @@ body{
 	font-weight: @fontSBold;
 	font-size: 18px;
 	line-height: 1.2;
+	.media-max(400px, {
+		font-size: 14px;
+	});
 }
 
 .visitors{
