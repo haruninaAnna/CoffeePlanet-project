@@ -652,12 +652,21 @@ body{
 .visitors{
 	padding-top: 112px;
 	padding-bottom: 85px;
+    .media-max(760px, {
+		padding-top: 62px;
+		padding-bottom: 56px;
+	});
+
 	&__h{
 		font-weight: @fontNormal;
 		font-size: 48px;
 		margin-top: 0;
 		margin-bottom: 60px;
 		text-align: center;
+		.media-max(550px, {
+			padding-bottom: 0px;
+			margin-bottom: 40px;
+		});
 	}
 }
 
@@ -673,10 +682,20 @@ body{
 	padding-right: 32px;
 	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+	.media-max(760px, {
+		.size(6);
+	});
+	.media-max(550px, {
+		.size(12);
+	});
 
 	&_pic{
 		padding-top: 70px;
 		padding-bottom: 21px;
+		.media-max(550px, {
+			padding-top: 40px;
+			padding-bottom: 11px;
+		});
 	}
 
 	&_p{
@@ -688,6 +707,9 @@ body{
 
 	&_date{
 		padding-bottom: 70px;
+		.media-max(550px, {
+			padding-bottom: 35px;
+		});
 	}
 }
 
