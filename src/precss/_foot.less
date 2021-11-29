@@ -130,11 +130,6 @@
     margin-bottom: 80px;
 }
 
-.modal-video{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .modal-alert{
     padding-top: 135px;
@@ -154,11 +149,23 @@
     font-size: 48px;
     font-weight: @fontNormal;
 }
+
  
 .modal-video{
     width: 79%;
+    height: auto;
     margin: 0 auto;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    &.active{
+        display: flex;
+    }
     &__wrap{
+        width: 70%;
+    }
+
+    &__padding{
         padding-top: 56.25%;
         position: relative;
         iframe{
