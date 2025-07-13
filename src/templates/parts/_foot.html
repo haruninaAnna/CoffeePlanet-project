@@ -1,40 +1,49 @@
-<div class="modal-overlay active">
-    <div class="modal modal-form">
-      <h2 class="modal_h">Book a table</h2>
-      <p class="modal_p">Leave your phone number and we will contact you</p>
-      <form action="#" class="">
-        <p class="application">
-            <label class="sr-only" for="name"><span class="label">Name</span></label>
-            <input placeholder="Name" class="input" name="input" id="name" type="text">
-        </p>
-        <p class="application">
-            <label class="sr-only" for="phone"><span class="label">Phone</span></label>
-            <input placeholder="Phone" class="input" name="input-phone" id="phone" type="phone" required>
-        </p>
-        <div>
-            <button class="button application" type="submit">Send</button>
-        </div>
-       </form>
-    </div>
-    <div class="modal modal-video active">
-        <div class="modal-video__wrap">
-            <div class="modal-video__padding">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ppPF9r6UcrU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </div>
-    <div class="modal modal-alert">
-        <img class="ico-modal" src="img/ico-ok.svg" alt="icon-done">
-        <h2 class="modal3_h">Thank you!</h2>
-        <p>We will contact you as soon as possible</p>
-    </div>
-    <button aria-label="Close a modal window" class="modal-overlay__close">
-
-    </button>
-</div>
-
-
-<script src="./js/js.js"></script>
-</body>
-</html>
+<footer id="contacts" class="wrapper">
+    <section class="come">
+        <aside class="come__aside">
+            <h2 class="come__h main-heading">
+                Come to us!
+            </h2>
+            <ul class="come__ico">
+                <img class="come__ico_pic" src="img/ico-time.svg" alt="time">
+                <li>
+                    8:00-23:00
+                </li>
+            </ul>
+            <ul class="come__ico">
+                <img class="come__ico_pic" src="img/ico-adress.svg" alt="adress">
+                <li>
+                    9532 W Linebaugh Ave, Tampa
+                </li>
+            </ul>
+            <ul class="come__ico">
+                <img class="come__ico_pic" src="img/ico-phone.svg" alt="phone">
+                <li>
+                    <a class="footer__navigation" href="tel:+12538675413">+1 253 867-54-13</a>
+                </li>
+            </ul>
+            <ul class="come__ico">
+                <img class="come__ico_pic" src="img/ico-email.svg" alt="email">
+                <li>
+                    <a class="footer__navigation" href="email:coffeeplanet@mail.com">coffeeplanet@mail.com</a>
+                </li>
+            </ul>
+            <p class="footer__web">
+                <a class="footer__web_link" target="_blank" href="https://www.facebook.com/pages/Wake%20Up%20Caff%C3%A8/1776235175764882/"> 
+                    {% include 'parts/svgo/ico-facebook.svg' %}
+                </a>
+                <a class="footer__web_link" target="_blank" href="#">
+                    {% include 'parts/svgo/ico-instagram.svg' %}
+                </a>
+            </p>
+        </aside> 
+    <div>
+        <a target="_blank" href="https://www.google.com/maps/place/Wake+Up+Caff%C3%A9/@50.5649245,30.2644672,15z/data=!4m5!3m4!1s0x0:0xab9eccb70313f074!8m2!3d50.5657582!4d30.2680162">
+            <img class="come__ico_pic" width="767" height="461" src="../img/map.png" alt="">
+        </a>
+    </div>   
+    </section>
+    <p class="footer">
+        Copyright 2021 CoffeePlanet
+    </p>
+</footer>

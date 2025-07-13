@@ -3,6 +3,8 @@
 @import 'libs/mixins.less';
 @import '_header.less';
 @import '_foot.less';
+@import 'blog.less';
+
 
 
 
@@ -706,82 +708,189 @@ body{
 }
 
 
-.come{
-	padding-top: 85px;
-	padding-bottom: 50px;
-	display: flex;
-	justify-content: space-between;
-	line-height: 1.2;
-	align-items: center;
-	.res-padding(85px, 50px, 1150px);
-	.media-max(1150px, {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	});
 
-	&__aside{
-		margin-bottom: 45px;
-		
-	}
 
-	&__h{
-		font-weight: @fontNormal;
-		font-size: 48px;
-		padding-bottom: 58px;
-		margin: 0;
-		.media-max(1150px,{
-			padding-top: 0;
-			text-align: center;
-			width: 100%;
-			
-		});	
-	}
 
-	&__ico{
-		display: flex;
-		align-items: baseline;
-		padding: 0;
-		margin-top: 0;
-		list-style: none;
-	
-		
-		&_pic{
-			margin-right: 12px;	
-			.media-max(1150px, {
-				max-width: 100%;
-			});
-		}
-	}
-	
+
+
+.modal-overlay{
+    //display: none;
+    //position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+    &__close{
+        padding: 0;
+        position: absolute;
+        top: 3%;
+        right: 9.7%;
+        .btn-reset();
+        @size: 25px;
+        width: @size;
+        height: @size;
+        &::before,
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            border-bottom: 2px solid #fff;
+            top: 50%;
+            margin-top: -1px;
+            width: 100%;
+        }
+        &::before{
+            transform: rotate(45deg);
+        }
+        &::after{
+            transform: rotate(-45deg);
+        }
+    }
+    &.active{
+        display: block;
+    }
 }
 
-.footer{
-	margin-top: 0;
-	margin-bottom: 36px;
-	text-align: center;
+.modal{
+    display: none;
+    text-align: center;
+    padding: 10px;
+    width: 97%;
+    max-width: 964px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 4px;
+    min-height: 50%;
+    max-height: 70%;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &.active{
+        display: block;
+    }
+   
+    &_h{
+        padding: 0;
+        margin-top: 80px;
+        margin-bottom: 18px;
+        text-align: center;
+        font-size: 48px;
+        font-weight: @fontNormal;
+      
+    }
 
-	&__navigation{
-		color: #000;
-		&:hover,
-		&:focus{
-			color: @colorMain;
-		}
-	}
+    &_p{
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 32px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+        line-height: 1.5;
+        max-width: 237px;
+    }
 }
 
-.footer__web{
-	margin-top: 45px;
-	padding-left: 0;
-	&_link{
-		&+&{
-			margin-left: 11px;
-		}
-	}
+
+.application{
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: @fontNormal;
+    &+&{
+        margin-top: 20px;
+    }
+}
+
+.label{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 14px; 
 }
 
 
+.input{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 374px;
+    padding-left: 24px;
+    padding-bottom: 14px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
 
 
+.button{
+    background-color:@colorMain;
+    color: #fff;
+    background-size: auto auto;
+    border: none;
+    box-shadow: 0px 7px 21px rgba(55, 125, 60, 0.3);
+    border-radius: 50px;
+    width: 214px;
+    text-align: center;
+    padding-top: 0;
+    margin-top: 52px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-bottom: 80px;
+}
 
 
+.modal-alert{
+    padding-top: 135px;
+    padding-bottom: 217px; 
+}
+
+.ico-modal{
+    margin: 0;
+    margin-bottom: 36px;
+}
+
+.modal3_h{
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+    font-size: 48px;
+    font-weight: @fontNormal;
+}
+
+ 
+.modal-video{
+    height: auto;
+    margin: 0 auto;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    &.active{
+        display: flex;
+    }
+    &__wrap{
+        width: 80%;
+    }
+
+    &__padding{
+        padding-top: 56.25%;
+        position: relative;
+        iframe{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            
+        }
+    }
+}
