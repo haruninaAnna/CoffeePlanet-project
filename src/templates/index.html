@@ -13,10 +13,10 @@
             More than simple coffee
         </p>
         <nav class="banner__navigation">
-            <button id="#" class="banner__btn banner__btn_colored">
+            <button id="open-book-modal" class="banner__btn banner__btn_colored">
                 Book a table
             </button> 
-            <button id="#" class="banner__btn banner__btn_trans">
+            <button id="open-video-modal" class="banner__btn banner__btn_trans">
                 Watch video
             </button>
         </nav>
@@ -81,22 +81,22 @@
                 <ul class="tabs-content__wrap">
                     <li class="product">
                         <img src="img/img-sweets1.jpg" alt="product__cappuccino" class="product__pic">
-                        <h3 class="product__name">Blonde Cappuccino</h3>
+                        <h3 class="product__name">Donuts</h3>
                         <p class="product__price">$5</p>
                     </li>
                     <li class="product">
                         <img src="img/img-sweets2.jpg" alt="product__coconutmilk_latte" class="product__pic">
-                        <h3 class="product__name">Coconutmilk  Latte</h3>
+                        <h3 class="product__name">Macarons</h3>
                         <p class="product__price">$3</p>
                     </li>
                     <li class="product">
                         <img src="img/img-sweets3.jpg" alt="product__dark-chocolate_mocha" class="product__pic">
-                        <h3 class="product__name">Dark Chocolate Mocha</h3>
+                        <h3 class="product__name">Truffles</h3>
                         <p class="product__price">$4</p>
                     </li>
                     <li class="product">
                         <img src="img/img-sweets4.jpg" alt="product__>oatmilk_honey_latte" class="product__pic">
-                        <h3 class="product__name">Oatmilk Honey Latte</h3>
+                        <h3 class="product__name">Chocolate</h3>
                         <p class="product__price">$5</p>
                     </li>
                 </ul>
@@ -105,22 +105,22 @@
                 <ul class="tabs-content__wrap">
                     <li class="product">
                         <img src="img/img-snacks1.jpg" alt="product__cappuccino" class="product__pic">
-                        <h3 class="product__name">Blonde Cappuccino</h3>
+                        <h3 class="product__name">Burger</h3>
                         <p class="product__price">$5</p>
                     </li>
                     <li class="product">
                         <img src="img/img-snacks2.jpg" alt="product__coconutmilk_latte" class="product__pic">
-                        <h3 class="product__name">Coconutmilk  Latte</h3>
+                        <h3 class="product__name">Popcorn</h3>
                         <p class="product__price">$3</p>
                     </li>
                     <li class="product">
                         <img src="img/img-snacks3.jpg" alt="product__dark-chocolate_mocha" class="product__pic">
-                        <h3 class="product__name">Dark Chocolate Mocha</h3>
+                        <h3 class="product__name">Hummus</h3>
                         <p class="product__price">$4</p>
                     </li>
                     <li class="product">
                         <img src="img/img-snacks4.jpg" alt="product__>oatmilk_honey_latte" class="product__pic">
-                        <h3 class="product__name">Oatmilk Honey Latte</h3>
+                        <h3 class="product__name">Hot Dog</h3>
                         <p class="product__price">$5</p>
                     </li>
                 </ul>
@@ -242,11 +242,11 @@
 </main>
 
 
-<div class="modal-overlay">
-    <div class="modal modal-form">
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal modal-form" id="book-modal">
       <h2 class="modal_h">Book a table</h2>
       <p class="modal_p">Leave your phone number and we will contact you</p>
-      <form action="#" class="">
+      <form action="#" id="booking-form" class="">
         <p class="application">
             <label class="sr-only" for="name"><span class="label">Name</span></label>
             <input placeholder="Name" class="input" name="input" id="name" type="text">
@@ -260,21 +260,27 @@
         </div>
        </form>
     </div>
-    <div class="modal modal-video">
+    <div class="modal modal-thankyou" id="thankyou-modal">
+        <img class="ico-modal" src="img/ico-ok.svg" alt="icon-done"> 
+        <h2 class="modal_h modal_h_thanks">Thank you!</h2>
+        <p class="modal_p" >We will contact you as soon as possible</p>
+        <button aria-label="Close a modal window" class="modal-overlay__close" id="close-thankyou">
+        </button>
+    </div>
+    <div class="modal modal-video" id="video-modal">
         <div class="modal-video__wrap">
             <div class="modal-video__padding">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ppPF9r6UcrU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/epMDcqKoQys?si=rv9EWi8fvhKyiQGZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
         </div>
     </div>
-    <div class="modal modal-alert">
+    <div class="modal modal-alert" id="alert-modal">
         <img class="ico-modal" src="img/ico-ok.svg" alt="icon-done">
-        <h2 class="modal3_h">Thank you!</h2>
-        <p>We will contact you as soon as possible</p>
+        <h2 class="modal_h">Thank you!</h2>
+        <p class="modal_p" >We will contact you as soon as possible</p>ы
     </div>
-    <button aria-label="Close a modal window" class="modal-overlay__close">
-
+    <button aria-label="Close a modal window" class="modal-overlay__close" id="close-modal">
     </button>
 </div>
 <script src="./js/js.js"></script>

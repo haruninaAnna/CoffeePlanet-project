@@ -714,13 +714,14 @@ body{
 
 
 .modal-overlay{
-    //display: none;
-    //position: fixed;
+    display: none;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
 
     &__close{
         padding: 0;
@@ -748,9 +749,12 @@ body{
             transform: rotate(-45deg);
         }
     }
-    &.active{
-        display: block;
-    }
+}
+
+.modal-overlay.active{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .modal{
@@ -779,6 +783,9 @@ body{
         text-align: center;
         font-size: 48px;
         font-weight: @fontNormal;
+		&_thanks{
+			margin-top: 40px;
+		}
       
     }
 
@@ -794,6 +801,10 @@ body{
         line-height: 1.5;
         max-width: 237px;
     }
+}
+
+.modal.active{
+	display: block;
 }
 
 
@@ -852,18 +863,12 @@ body{
 }
 
 .ico-modal{
+	padding: 0;
     margin: 0;
-    margin-bottom: 36px;
+	margin-top: 7%;
 }
 
-.modal3_h{
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 0;
-    text-align: center;
-    font-size: 48px;
-    font-weight: @fontNormal;
-}
+
 
  
 .modal-video{
